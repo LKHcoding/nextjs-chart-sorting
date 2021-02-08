@@ -6,21 +6,18 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Visualized Sort Algorithm</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Visualized Sort <a href="https://github.com/LKHcoding">Algorithm</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-        <Insert />
+        
       </main>
+        <Insert />
     </div>
   );
 }
