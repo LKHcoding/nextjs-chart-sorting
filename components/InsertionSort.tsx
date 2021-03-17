@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { range, shuffle } from "lodash"
 
-
+const SIZE = 30;
 const getArr = () => {
-  return shuffle(range(1,11));
+  return shuffle(range(1,SIZE + 1));
 }
 
 const swap = (arr, a, b) => {
@@ -24,6 +24,28 @@ const sort = (arr : number[]) => {
     i++;
   }
 }
+interface IPropsBar {
+  value: number;
+  idx: number;
+}
+const Bar: FC<IPropsBar> = (props) => {
+  const { value, idx } = props;
+  const style = {
+    height: value * 10,
+    transform: `translateX(${idx*21}px)`
+  }
+  return (
+  <>
+    <div style={style} className="bar" />
+    <style jsx>{`
+     .bar {
+      position: absolute;
+      width: 20px;
+      background-color: black;
+    }
+    `}</style>
+  </>);
+}
 
 const InsertionSort = () => {
 
@@ -39,7 +61,7 @@ const InsertionSort = () => {
   }
   return <div>
   <div className="board">
-    {arr.join(',')}
+    {arr.map((value,i) => <Bar key={i} value={value} idx={i} />)}
   </div>
 
   <div className="buttonBox">
@@ -54,6 +76,7 @@ const InsertionSort = () => {
       background-color: green;
       color: white;
       font-size: 40px;
+      transform: rotateX(180deg)
     }
 
     .buttonBox {
@@ -65,9 +88,9 @@ const InsertionSort = () => {
 
     button {
       font-size : 40px;
-
     }
   
+   
   `}</style>
   </div>;
 };
