@@ -5,6 +5,26 @@ import { range, shuffle } from "lodash"
 const getArr = () => {
   return shuffle(range(1,11));
 }
+
+const swap = (arr, a, b) => {
+  const tmp = arr[a];
+  arr[a] = arr[b];
+  arr[b] = tmp;
+}
+
+const sort = (arr : number[]) => {
+
+  let i = 1;
+  while(i < arr.length) {
+    let j=i
+    while(j>0 && arr[j-1]>arr[j]){
+      swap(arr, j, j-1);
+      j--;
+    }
+    i++;
+  }
+}
+
 const InsertionSort = () => {
 
   const [arr, setArr] = useState(getArr());
@@ -12,7 +32,11 @@ const InsertionSort = () => {
   const handleShuffle = () => {
     setArr(getArr());
   }
-
+  const handleSort = () => {
+    const sortedArr = [...arr];
+    sort(sortedArr);
+    setArr(sortedArr);
+  }
   return <div>
   <div className="board">
     {arr.join(',')}
@@ -20,7 +44,7 @@ const InsertionSort = () => {
 
   <div className="buttonBox">
   <button onClick={handleShuffle}>shuffle</button>
-  <button>sort</button>
+  <button onClick={handleSort}>sort</button>
   </div>
 
   <style jsx>{`
