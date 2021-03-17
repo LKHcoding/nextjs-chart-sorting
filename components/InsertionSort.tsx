@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { range, shuffle } from "lodash"
 
 
@@ -7,8 +7,11 @@ const getArr = () => {
 }
 const InsertionSort = () => {
 
-  // const arr = [1,2,3,4,5,6,7,8,9,10]
-  const arr = getArr();
+  const [arr, setArr] = useState(getArr());
+
+  const handleShuffle = () => {
+    setArr(getArr());
+  }
 
   return <div>
   <div className="board">
@@ -16,7 +19,7 @@ const InsertionSort = () => {
   </div>
 
   <div className="buttonBox">
-  <button>shuffle</button>
+  <button onClick={handleShuffle}>shuffle</button>
   <button>sort</button>
   </div>
 
