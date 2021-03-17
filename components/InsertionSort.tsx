@@ -1,8 +1,14 @@
 import React from "react";
+import { range, shuffle } from "lodash"
 
+
+const getArr = () => {
+  return shuffle(range(1,11));
+}
 const InsertionSort = () => {
 
-  const arr = [1,2,3,4,5,6,7,8,9,10]
+  // const arr = [1,2,3,4,5,6,7,8,9,10]
+  const arr = getArr();
 
   return <div>
   <div className="board">
@@ -13,6 +19,7 @@ const InsertionSort = () => {
   <button>shuffle</button>
   <button>sort</button>
   </div>
+
   <style jsx>{`
     .board {
       width: 100%;
