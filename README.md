@@ -1,10 +1,12 @@
 # Visualized Chart Sorting WebApp 👋
 
-### Next.js, React, typescript와 같은 Modern Web Frontend 개발환경에서 알고리즘 시각화 웹 애플리케이션을 개발하는 프로젝트 입니다.
+### Next.js, React, typescript와 같은 Modern Web Frontend 개발환경에서
+
+### 알고리즘 시각화 웹 애플리케이션을 개발하는 프로젝트 입니다.
 
 <br>
 
-![녹화_2021_03_20_03_17_35_810](https://user-images.githubusercontent.com/55027765/111825949-71285600-892b-11eb-8bd9-8865630745bf.gif)
+![녹화_2021_03_20_04_07_19_388](https://user-images.githubusercontent.com/55027765/111830892-edbe3300-8931-11eb-9b3a-62f53215b18f.gif)
 
 <br>
 
