@@ -1,4 +1,4 @@
-import { range, shuffle } from "lodash";
+import { range, shuffle, uniqueId } from "lodash";
 import {
   useState,
   FC,
@@ -122,7 +122,12 @@ const Board: FC<IPropsBoard> = (props) => {
       {extendedBarArr.map((item, i) => {
         // console.log("render Bar");
         return (
-          <Bar key={i} value={item.value} idx={i} refSetX={item.refSetX} />
+          <Bar
+            key={`${uniqueId("set")}:${i}`}
+            value={item.value}
+            idx={i}
+            refSetX={item.refSetX}
+          />
         );
       })}
       <style jsx>{`
