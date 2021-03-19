@@ -14,10 +14,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Visualized Sort <a href="https://github.com/LKHcoding">Algorithm</a>
         </h1>
-
-        
       </main>
-        <Insert />
+      <Insert />
     </div>
   );
 }
