@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Visualized Chart Sorting WebApp 👋
 
-## Getting Started
+### Next.js, React, typescript와 같은 Modern Web Frontend 개발환경에서 알고리즘 시각화 웹 애플리케이션을 개발하는 프로젝트 입니다.
 
-First, run the development server:
+<br>
+
+![녹화_2021_03_20_03_17_35_810](https://user-images.githubusercontent.com/55027765/111825949-71285600-892b-11eb-8bd9-8865630745bf.gif)
+
+<br>
+
+---
+
+구현 기능 :rocket:
+
+    - tweening-js를 사용하여 부드러운 애니메이션 적용
+    - lodash shuffle api를 통해 배열 무작위로 섞기
+    - lodash rage api를 통한 배열 크기 지정
+    - lodash uniqueId api를 통한 반복문의 Unique한 key값 생성
+    - 정렬 알고리즘 연산 중 시간지연을 통해 시각화 구현
+    - React.memo, useRef를 사용해 렌더링 최적화 적용
+
+---
+
+### To use this application, :heavy_check_mark:
 
 ```bash
-npm run dev
-# or
-yarn dev
+# type
+"npm install"
+# then
+"npm run dev" or "yarn dev"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Tech & Tools :mag:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<img src = "https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white"> <img src = "https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/-React-000000?style=flat&logo=react&logoColor=00c8ff"> <img src="https://img.shields.io/badge/-TypeScript-blue?style=flat&logo=typescript&logoColor=ffffff"> <img src="https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff"> <img src="https://img.shields.io/badge/-Next.js-000000?style=flat&logo=Next.js&logoColor=ffffff"> <img src="http://img.shields.io/badge/-VS%20Code-007ACC?style=flat&logo=visual%20studio%20code&logoColor=white"> <img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"> <img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+### :clap: Skills & Version
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```json
+"dependencies": {
+  "lodash": "^4.17.20",
+  "next": "10.0.6",
+  "react": "17.0.1",
+  "react-dom": "17.0.1",
+  "tweening-js": "^2.1.0"
+},
+"devDependencies": {
+  "@types/lodash": "^4.14.168",
+  "@types/node": "^14.14.25",
+  "@types/react": "^17.0.1",
+  "typescript": "^4.1.3"
+}
+```

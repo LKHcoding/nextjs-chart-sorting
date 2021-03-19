@@ -16,8 +16,8 @@ type TSetIdx = Dispatch<SetStateAction<number>>;
 type TSetX = Dispatch<SetStateAction<number>>;
 type TSet = Dispatch<SetStateAction<any>>;
 
-const DURATION = 50;
-const SIZE = 30;
+const DURATION = 40;
+const SIZE = 35;
 const BAR_WIDTH = 20;
 const BAR_MARGIN = 2;
 
@@ -91,7 +91,9 @@ const Bar: FC<IPropsBar> = (props) => {
         .bar {
           position: absolute;
           width: 20px;
-          background-color: black;
+          background-color: white;
+          border: solid 1px black;
+          border-radius: 4px;
         }
       `}</style>
     </>
@@ -133,9 +135,11 @@ const Board: FC<IPropsBoard> = (props) => {
       <style jsx>{`
         .board {
           width: 100%;
-          height: 200px;
-          background-color: green;
+          height: 400px;
+          background-color: black;
           color: white;
+          border: solid 1px black;
+          border-radius: 5px;
           transform: rotateX(180deg);
         }
       `}</style>
@@ -171,13 +175,13 @@ const InsertionSort = () => {
         className="index i"
         style={{ transform: `translateX(${getX(idxI)}px)` }}
       >
-        i
+        &nbsp;&nbsp;i
       </div>
       <div
         className="index j"
         style={{ transform: `translateX(${getX(idxJ)}px)` }}
       >
-        j
+        &nbsp;&nbsp;j
       </div>
 
       <div className="buttonBox">
@@ -189,12 +193,16 @@ const InsertionSort = () => {
       <style jsx>{`
         .buttonBox {
           width: 100%;
-          height: 60px;
-          background-color: gray;
+          height: 70px;
+          background-color: white;
+          border: solid 1px black;
           text-align: right;
         }
         button {
-          font-size: 40px;
+          padding: 5px;
+          margin: 10px;
+          font-size: 30px;
+          border-radius: 5px;
         }
         .running {
           font-size: 40px;
@@ -205,12 +213,22 @@ const InsertionSort = () => {
           opacity: 0.8;
         }
         .index.j {
-          background-color: blue;
-          color: white;
+          margin-top: 26px;
+          background-color: #bfbfff;
+          color: black;
+          font-weight: bold;
+          border-radius: 3px;
+          border: solid 1px #7a7a7a;
+          margin-left: 1px;
         }
         .index.i {
-          background-color: yellow;
+          margin-top: 2px;
+          background-color: #ffff91;
           color: black;
+          font-weight: bold;
+          border-radius: 3px;
+          border: solid 1px #7a7a7a;
+          margin-left: 1px;
         }
       `}</style>
     </div>
